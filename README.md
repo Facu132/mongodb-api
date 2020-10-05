@@ -11,7 +11,7 @@ API  mongoDB, usando *Express*, *MongoAtlas*, *Mongoose*.
  ---------------------------------------------------------------------
 **CONTRATO**
 
-*general*
+*General*
 
 ##### Coleccion Usuarios
 - GET url/users -> Devuelve la lista de usuarios.
