@@ -1,0 +1,26 @@
+{
+  "name": "mongodb-api",
+  "version": "1.0.0",
+  "description": "Esta api contiene usuarios y canciones.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Facu132/mongodb-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Facu132/mongodb-api/issues"
+  },
+  "homepage": "https://github.com/Facu132/mongodb-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.6",
+    "nodemon": "^2.0.4"
+  }
+}
