@@ -16,7 +16,7 @@ API  mongoDB, usando *Express*, *MongoAtlas*, *Mongoose*.
 ##### Coleccion Usuarios
 - GET url/users -> Devuelve la lista de usuarios.
 - POST url/users -> Agrega una canción.
-- DELETE url/users -> Elimina la cancion desde el body
+- DELETE url/users -> Elimina la canción desde el body
 
       {
         "_id": "5f79fc2e5270524c64aa7e40"
