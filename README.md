@@ -36,7 +36,7 @@ API  mongoDB, usando *Express*, *MongoAtlas*, *Mongoose*.
 ##### Coleccion Canciones
 - GET url/songs -> Devuelve toda las canciones, sino hay, devuelve un error.
 - GET url/songs/:name -> Devuelve la cancioón que buscaste.
-- POST url/songs-> Arego una cancion  a la base de datos con song en el body formato JSON.
+- POST url/songs-> Agrego una canción a la base de datos con song en el body con formato JSON.
 - DELETE url/songs/:name  -> eliminar una cancion.
 - PUT url/songs/:name -> modifica una cancion.
 
