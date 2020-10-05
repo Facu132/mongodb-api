@@ -1,52 +1,32 @@
-# mongodb-api
+# MongoDB Api
 
+Esta api contiene usuarios y canciones.
+
+## Especificaciones:
+1.  El formato de la informacion que se envie a la API debera ser **JSON**.
+2.  El formato de cada usuario debe contener: <code>{"name", "lastname", "mail", "age"}</code>
+3.  El formato de cada cancion debe contener: <code>{"name", "album", "duration", "artist"}</code>
+4.  Para agregar una canción favorita a un usuario, se debe enviar un ObjectId de una canción que exista. <code>["ObjId"]</code>
+5.  Para eliminar una cancion favorita de un usuario, en la url se debe especificar el nombre del usuario, y el ObjId de su canción a eliminar.
+
+## Routes:
+
+## GET 
+-  'urlbase/users': Devuelve todos los usuarios.
+-  'urlbase/songs': Devuelve todas las canciones.
+-  'urlbase/user/:user': Devuelve un usuario.
+-  'urlbase/song/:song': Devuelve una canción.
  
- Repositorio de api .
+## POST 
+- 'urlbase/users': Agregar usuario.
+- 'urlbase/songs': Agregar canción.
+- 'urlbase/users/:user/song': Agregar canción a lista de canciones favoritas de un usuario.
 
-API  mongoDB, usando *Express*, *MongoAtlas*, *Mongoose*.
+## PUT 
+-  'urlbase/user/:user': Modificar usuario.
+-  'urlbase/song/:song': Modificar canción.
 
-
-## ¿Como usar la API?
-
- ---------------------------------------------------------------------
-**CONTRATO**
-
-*General*
-
-##### Coleccion Usuarios
-- GET url/users -> Devuelve la lista de usuarios.
-- POST url/users -> Agrega una canción.
-- DELETE url/users -> Elimina la canción desde el body
-
-      {
-        "_id": "5f79fc2e5270524c64aa7e40"
-        }
-
-- PUT url/users/:name -> Modifica la cancion que buscas, la modificación se hace desde el body.
-
-     {
-        "favoriteSongs": [],
-        "name": "modificar nombre",
-        "lastName": "modificar apellido",
-        "mail": "modificar email",
-        "age": "modificar edad"
-    }
-
-
-##### Coleccion Canciones
-- GET url/songs -> Devuelve toda las canciones, sino hay, devuelve un error.
-- GET url/songs/:name -> Devuelve la cancioón que buscaste.
-- POST url/songs-> Agrego una canción a la base de datos con song en el body con formato JSON.
-- DELETE url/songs/:name  -> eliminar una cancion.
-- PUT url/songs/:name -> Modifica una canción.
-
-*Para un usuario especifico*
-- POST url/users/songs/:user-> Agrego una canción a favoritos desde el body con la id
- con este formato:
-["5f79278dc427e33460626eee"]
-- DELETE url/:name -> Eliminar una canción favorita.
- ---------------------------------------------------------------------
- ### Cual es la arquitectura que se uso para el código?
- -MVC M:model
-      V:views
-      C:controller
+## DELETE 
+-  'urlbase/user/:user': Eliminar usuario.
+-  'urlbase/song/:song': Eliminar canción.
+-  'urlbase/users/:user/:song': Eliminar canción de lista de canciones favoritas de usuario.
